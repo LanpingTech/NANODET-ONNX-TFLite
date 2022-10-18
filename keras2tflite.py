@@ -37,6 +37,6 @@ if __name__ == "__main__":
     tflite_fp16_model_path = "models/nanodet_fp16.tflite"
     tflite_int8_model_path = "models/nanodet_int8.tflite"
     keras_model = tf.keras.models.load_model(keras_model_path)
-    # to_tflite(keras_model, tflite_model_path)
-    # to_quantized_tflite_fp16(keras_model, tflite_fp16_model_path)
+    to_tflite(keras_model, tflite_model_path)
+    to_quantized_tflite_fp16(keras_model, tflite_fp16_model_path)
     to_quantized_tflite_int8(keras_model, tflite_int8_model_path)
